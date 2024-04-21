@@ -1,6 +1,7 @@
 
     {
         "version": 2,
+         "rewrites": [{ "source": "/(.*)", "destination": "/" }],
         "builds": [
           {
             "src": "./server.js",
@@ -11,4 +12,5 @@
           { "handle": "filesystem" }
         ]
       }
+      
         
