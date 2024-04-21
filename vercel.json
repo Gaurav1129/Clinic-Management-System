@@ -1,22 +1,14 @@
-{
-    "version": 2,
-    "routes": [
-      {
-        "src": "/api/doctors",
-        "dest": "/api/doctors.js"
-      },
-      {
-        "src": "/api/doctors/:id",
-        "dest": "/api/doctors/[id].js"
-      },
-      {
-        "src": "/api/doctors/:id/availability",
-        "dest": "/api/doctors/availability.js"
-      },
-      {
-        "src": "/api/appointments/book",
-        "dest": "/api/appointments/book.js"
+
+    {
+        "version": 2,
+        "builds": [
+          {
+            "src": "./server.js",
+            "use": "@vercel/node"
+          }
+        ],
+        "routes": [
+          { "handle": "filesystem" }
+        ]
       }
-    ]
-  }
-  
+        
